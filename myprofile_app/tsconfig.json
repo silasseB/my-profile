@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
+    "esModuleInterop": true,
+    "baseUrl": "frontend/src",
+    "paths": {
+        "components/*": ["frontend/src/components/*"],
+        "media/*": ["frontend/src/media/*"],
+    }
+    
+  },
+  "include": ["frontend/src", "frontend/src/image.d.ts"]
+}

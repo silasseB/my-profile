@@ -3,11 +3,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { Router}  from "react-router-dom";
+import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'css/index.css';
+import "css/App.css";
+import "css/home.css";
 
+import * as serviceWorker from './utils/serviceWorker';
+import App, {history} from './App';
+
+//import {store} from "store/index";
 
 const _App =()=> (
-	<p>Hello</p>
+	    <Router history={history}>
+            <App/>
+        </Router>
 ) 
+
 
 ReactDOM.render(<_App/>, document.getElementById('root')
 );

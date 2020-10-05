@@ -20,21 +20,33 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'quvg&3fn)zy^$h%vh!*7tl+19uk^v3!cv&1ywv%ynkd!6y59ed'
+#SECRET_KEY = 'quvg&3fn)zy^$h%vh!*7tl+19uk^v3!cv&1ywv%ynkd!6y59ed'
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS=['127.0.0.1', '192.168.43.14', 'localhost']
 
 # Application definition
+SITE_ID = 1
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'backend',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'webpack_loader',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -74,7 +86,7 @@ WSGI_APPLICATION = 'myprofile_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wiplayit_app',
+        'NAME': 'myprofile_db',
         'USER': 'silasi',
         'PASSWORD': 'sila9020@?',
         'HOST': 'localhost',
@@ -156,3 +168,35 @@ WEBPACK_LOADER = {
             
         }
 }
+
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+        )
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        ),
+
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+   ),
+
+
+}
+
+
+
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+EMAIL_HOST          = os.getenv("DEV_EMAIL_HOST")
+EMAIL_HOST_USER     = os.getenv("DEV_EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("DEV_EMAIL_HOST_PASSWORD")
+
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL       = EMAIL_HOST_USER
+EMAIL_FROM         = EMAIL_HOST_USER 

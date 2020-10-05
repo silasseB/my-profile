@@ -1,0 +1,434 @@
+
+
+@import '~material-design-icons/iconfont/material-icons.css';
+
+
+@media (max-width: 980px) {
+    body {
+        background : #ffff;
+    }
+
+
+    .profile-box-container {
+        padding-top : 100px;
+        border      : px solid black;
+    }
+
+    
+
+    .navbar-container {
+        border-bottom : 1px solid #D5D7D5;
+        width    : 100%;
+        background : #F0CEB1;
+        padding    : 0px 15px;
+        z-index    : 100;
+    }
+
+    .myprofile-dropdown-men {
+        background : #F0CEB1;
+        color:#FFF;
+        position: absolute;
+        top: -250px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .navigation-box {
+        /* Added Animation Delay Manually */
+        -webkit-animation-delay: 500ms !important;
+        animation-delay: 500ms !important;
+        display: block;
+    }
+
+    .navigation-dropdown-menu ul  {
+        justify-content : center;
+        display : flex;
+    }
+
+    .navigation-dropdown-menu ul li  {
+        margin : 13px 0; 
+    }
+
+    .navigation-dropdown-menu ul li button {
+       /* padding: 0.5rem 2rem;
+        margin: 0.5rem;*/
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    .navigation-box {
+        display: none;
+        /*
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: .5s;
+        transition: .5s;
+        */
+    }
+
+    .hamburger-box input:checked ~ div .navigation-box  {
+        height: 100%;
+        padding: 35px 0 5px;
+        margin-top  : 13px; 
+        background-color : #F0CEB1;
+        display: -webkit-box;
+        display: -ms-block;
+        display: block; 
+    
+    }
+
+    .hamburger-box input:checked +  div .navigation-box {
+        border : px solid red;
+        opacity: 1;
+        -webkit-transform : translateY(0);
+        transform  : translateY(0);
+    }
+
+    .navigation-box    {
+        /*-webkit-transform: translateY(-228px);
+        transform: translateY(-228px);*/
+        -webkit-transition: -webkit-transform .5s ease-in-out;
+        transition: -webkit-transform .5s ease-in-out;
+        transition: transform .5s ease-in-out;
+        transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+        
+    }
+
+    .navbar-item {
+        font-size: 13px;
+        font-weight: bold;
+        font-family : 'Ubuntu';
+        color : #558FF0; 
+    }
+
+    .navbar-item:hover {
+        border : px solid blue;
+    }
+    
+    .tools-and-skills-icons {
+        border    : px solid blue;
+        display   : flex;
+        flex-wrap : wrap;
+        padding-left: 10px;
+    }
+
+    .skill {
+        margin : 15px 10px;
+        border : px solid blue;
+    }
+
+    .icon-name {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+ 
+
+    .section-description {
+        font-weight : bold;
+        font-size   : 20px;
+        color       : #FF5ADF; 
+        font-family: 'Cambay';
+    }
+ 
+    
+}
+
+
+
+
+@media (min-width: 980px) {
+
+    body {
+
+    }
+
+
+    .app-contents {
+        border : px solid blue;   
+        margin : 5% 12%;
+    }
+
+
+    .description-text {
+        margin : 20px  12%;
+    }
+
+    .contents-header {
+        border : px solid black;
+            
+    }
+    
+    .profile-pic:hover {
+        cursor: default;
+    }
+
+    .navbar-container {
+        padding-top: 20px;
+    }
+
+    .navbar-box {
+  
+    }
+
+    .desktop-navigation {
+        justify-content : flex-end;
+        display         : flex;
+        padding-right   : 7%;
+        border          : px solid red;
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .navigation-box {
+        display : flex;
+        border  : px solid black;
+
+    }
+
+    .navigation-box ul li {
+        border  : px solid red;
+        margin  : 0 15px;
+    }
+
+    .navbar-item {
+        font-size   : 12px;
+        font-weight : bold;
+        font-family : 'Ubuntu';
+        color       : #558FF0; 
+        border      : px solid blue;
+    }
+
+    .navbar-item:hover {
+        color  : #558FF0; 
+    }
+
+    .section-contents {
+        border  : 1px solid blue;
+        margin  : 0 10%; 
+    }
+
+    .section-title-box {
+        margin-bottom : 20px;
+    }
+
+    .section-title  {
+        font-weight : bold;
+        font-size   : 25px;
+        color       : #558FF0; 
+    }
+
+    .section-description {
+        font-weight : bold;
+        font-size   : 20px;
+        color       : #FF5ADF; 
+        font-family: 'Cambay';
+    }
+
+    .tools-and-skills-icons {
+        border    : px solid blue;
+        display   : flex;
+        flex-wrap : wrap;
+        margin    : 0  10% 20px;
+
+    }
+
+    .skill {
+        margin : 15px;
+    }
+
+    .icon-name {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+ 
+   
+    .contact-title {
+        font-size: 25px;
+
+    }
+
+    .contact-title-box {
+        border : px solid blue;
+    }
+
+    .contact-form-description {
+        margin    : 15px 0; 
+        font-size : 15px;
+        font-family: 'Cambay';
+    }
+
+    .contact-contents {
+        display: flex;
+        border : px solid blue;
+    }
+
+    .contact-box {
+        border : px solid black;
+        display: flex;
+    }
+
+
+    .contact-form {
+        border : px solid red;
+        width  : 50%;
+    }
+
+    .copyright-bo {
+        border : 1px solid black;
+        justify-content: center;
+        display:  flex;
+        background: #F0CEB1;
+
+    }
+
+    .copyright-tex {
+        display:  flex;
+        font-size: 14px;
+        margin: 15px 0; 
+        border : 1px solid red;
+    }
+
+    
+    .navbar-logo-box  {
+        border: px solid blue;
+        top: 15px;
+        left: 12%;
+    }
+
+    
+    .navbar-logo-box  {
+    
+    }
+
+    
+    .navbar-logo-box  ul li {
+        margin:  0 4px
+    }
+
+
+    .profile-pic-box {
+        border   : 3px solid #ffff;
+        margin   : 0; 
+        height   : 250px; 
+        width    : 250px;  
+        position : absolute;
+        bottom   : auto;
+        top      : 13%; 
+        right    : auto;
+        left     : 7%;
+        z-index  : 999 !important;
+        -webkit-box-shadow: 0px 4px 19px -9px rgba(128,125,128,1);
+        -moz-box-shadow: 0px 4px 19px -9px rgba(128,125,128,1);
+        box-shadow: 0px 4px 19px -9px rgba(128,125,128,1);
+    }
+
+    .about-profile-pic-box {
+        width : 50%;
+    }
+
+    .about-contents {
+        border : px solid blue; 
+        display: flex;
+    }
+
+    .about-text-box, .credentials-box {
+       
+    }
+
+    .about-text-box {
+        margin-left  : 6%; 
+        margin-right : 3%; 
+        padding-left : 10px; 
+    }
+
+    .about-title-box {
+        margin-left   : 20%;
+        margin-bottom : 20px;
+    }
+   
+
+    .about-title-description {
+        font-weight : bold;
+        font-size   : 20px;
+        color       : #FF5ADF; 
+    }
+    
+    .profile-pic {
+        height: 100%;
+    }
+
+    .full-name-box {
+        margin : 0;
+        margin-top: 12%;
+        border : px solid black;
+        
+    }
+
+    .on-scrol {
+        position: fixed;
+        width    : 100%;
+        background : #ffff;
+        -webkit-box-shadow: -2px 0px 5px 0px rgba(213,213,215,1);
+        -moz-box-shadow: -2px 0px 5px 0px rgba(213,213,215,1);
+        box-shadow: -2px 0px 5px 0px rgba(213,213,215,1);
+    }
+
+
+    .portfolio-contents {
+        border  : px solid blue;
+        display : flex;
+        padding : 30px 0 80px; 
+    }
+
+
+    .desktop-item-box {
+        border : px solid black;   
+        width  : 60%;
+    }
+
+
+    .portfolio-item-mobile {
+        width   : 135px; 
+        left    : 43%;
+        top     : 45%;
+    }
+
+    .portfolio-details-items {
+        border  : px solid blue;
+        margin  : 0 4%;  
+    }
+
+    .portfolio-details {
+        border  : px solid red;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .portfolio-links {
+        margin-top: 150px;
+    }
+}
+
+
