@@ -115,7 +115,7 @@ const HomePageTemplate  = props => {
                             <li>Silasi V</li>
                         </ul>
                         <ul className="profile-title">
-                            <li>Full Stack Web Developer</li>
+                            <li>FullStack Web Developer</li>
                         </ul>
                     </div>
                 </div>
