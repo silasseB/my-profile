@@ -26,7 +26,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS=['127.0.0.1', '192.168.43.14', 'localhost']
+ALLOWED_HOSTS=[
+        '127.0.0.1', 
+        '192.168.43.14',
+        'localhost',
+        'valoi.pythonanywhere.com',
+    ]
 
 # Application definition
 SITE_ID = 1
@@ -192,9 +197,9 @@ REST_FRAMEWORK = {
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-EMAIL_HOST          = os.getenv("DEV_EMAIL_HOST")
-EMAIL_HOST_USER     = os.getenv("DEV_EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.getenv("DEV_EMAIL_HOST_PASSWORD")
+EMAIL_HOST          = os.getenv("EMAIL_HOST")
+EMAIL_HOST_USER     = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
