@@ -25,16 +25,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS=[
-        '127.0.0.1', 
-        '192.168.43.14',
-        'localhost',
-        'valoi.pythonanywhere.com',
-    ]
-
-# Application definition
-SITE_ID = 1
 
 
 INSTALLED_APPS = [
@@ -85,19 +75,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myprofile_app.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myprofile_db',
-        'USER': 'silasi',
-        'PASSWORD': 'sila9020@?',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
 
 
 CORS_ORIGIN_WHITELIST = [
