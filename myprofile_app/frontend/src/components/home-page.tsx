@@ -65,12 +65,12 @@ class Home extends Component<Props, State> {
         
         axios.get('/index/')
         .then(response => {
-            //console.log(response) 
+            console.log(response) 
             let data = response.data
             if (data) {
                 let home = data.home[0]
                 let profile = data.profile[0]
-                
+               
                 this.setState({profile, home})  
             }
             
