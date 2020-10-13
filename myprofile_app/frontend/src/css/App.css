@@ -138,16 +138,6 @@
         font-weight: bold;
         text-align: center;
     }
- 
-
-    .section-description {
-        font-weight : bold;
-        font-size   : 20px;
-        color       : #FF5ADF; 
-        font-family: 'Cambay';
-    }
- 
-    
 }
 
 
@@ -228,20 +218,14 @@
     }
 
     .section-title-box {
-        margin-bottom : 20px;
+        margin-left : 43px;
     }
 
+    
     .section-title  {
         font-weight : bold;
         font-size   : 25px;
         color       : #558FF0; 
-    }
-
-    .section-description {
-        font-weight : bold;
-        font-size   : 20px;
-        color       : #FF5ADF; 
-        font-family: 'Cambay';
     }
 
     .tools-and-skills-icons {
