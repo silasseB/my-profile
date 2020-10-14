@@ -3,8 +3,6 @@ import IndexHoc from './index';
 import * as wiplayitMockSmall from 'media/wiplayit-mock-small.png';
 import * as wiplayitMockBig from 'media/wiplayit-mock-big.png';
 
-const wiplayitMock =  require('media/wiplayit-mock.png')
-//const IndexHoc = require('components/index')
 
 interface State {
 	pageContents?:object;

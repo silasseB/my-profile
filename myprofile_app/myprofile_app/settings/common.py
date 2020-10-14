@@ -142,7 +142,7 @@ print(STATIC_ROOT)
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-            'BUNDLE_DIR_NAME': 'frontend/',
+            'BUNDLE_DIR_NAME': '/frontend/',
             'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
         }
 }
