@@ -151,6 +151,11 @@ export function IndexHoc(Component) {
 
     changeRouter(url:string, state?:object):void {
         this.toggleMenu()
+        let currentUrl:string = this.props.match.url;
+      
+        if (currentUrl === url) {
+            return;
+        }
 
         setTimeout(()=>  this.setState({changing:true}), 100);
         setTimeout(()=>{ history.push(url, state) }, 1000);
