@@ -45,7 +45,7 @@ class SkillsContainer extends Component<Props, State> {
 export default IndexHoc(SkillsContainer);
 
 
- const devIconStyle = {
+ const devIconStyle:React.CSSProperties = {
         fill: "thistle",
         width: "50px",
     };
@@ -79,7 +79,7 @@ const SkillsTemplate  = props => {
 
 }
 
-const ToolsIcons  = props => {
+const ToolsIcons:React.FC   = props => {
     return(
         <div className="tools-and-skills-icons">
             <ul className="skill">

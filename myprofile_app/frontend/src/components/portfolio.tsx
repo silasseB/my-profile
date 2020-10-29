@@ -4,20 +4,11 @@ import * as wiplayitMockSmall from 'media/wiplayit-mock-small.png';
 import * as wiplayitMockBig from 'media/wiplayit-mock-big.png';
 
 
-interface State {
-	pageContents?:object;
-    Contents?:any;
-}
-
-class PortfolioContainer extends Component<State> {
+class PortfolioContainer extends Component {
     private isFullyMounted: boolean = false;
 
     static defaultProps: object = {
        
-    };
-
-    readonly state: State = {
-    	       
     };
 
     componentWillUnmount() {
@@ -39,7 +30,7 @@ class PortfolioContainer extends Component<State> {
 
 export default IndexHoc(PortfolioContainer);
 
-const PortfolioTemplate  = props => {
+const PortfolioTemplate:React.FC<{styles?:object}>   = props => {
     //console.log(wiplayitMockSmall, wiplayitMockBig)
     return(
         <div style={props.styles} id="app-contents" className="app-contents">
