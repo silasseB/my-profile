@@ -16,8 +16,6 @@ class PortfolioContainer extends Component {
     };
     
     componentDidMount() {
-        console.log(this.props)
-
     }
 
     render() {

@@ -58,7 +58,7 @@ class MessageSerializer(serializers.ModelSerializer):
 		email_template_name   = 'message_mail.html'
 
 		name = self.validated_data.get('name')
-		subject   = self.validated_data.get('subject')
+		subject   = 'Hey Silasi, someone came across your portfolio.'
 		message   = self.validated_data.get('message')
 		email     = self.validated_data.get('email')
 
@@ -84,4 +84,11 @@ class MessageSerializer(serializers.ModelSerializer):
 
 	def send_message(self, request=None):
 		msg = self.render_mail(request)
-		msg.send()
+		try:
+			msg.send()
+			return {'deatil':'Your message to silasi has been sent.'}
+
+		except Exception as e:
+			raise e
+		
+		

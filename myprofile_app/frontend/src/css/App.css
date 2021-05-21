@@ -6,6 +6,7 @@
 @media (max-width: 980px) {
     body {
         background : #ffff;
+        padding-top: 80px;
     }
 
 
@@ -146,13 +147,13 @@
 @media (min-width: 980px) {
 
     body {
-
+        padding-top: 30px;
     }
 
 
     .app-contents {
         border : px solid blue;   
-        margin : 5% 12%;
+        margin : 1% 12%;
     }
 
 
@@ -264,17 +265,14 @@
 
     .contact-contents {
         display: flex;
-        border : px solid blue;
     }
 
     .contact-box {
-        border : px solid black;
         display: flex;
     }
 
 
     .contact-form {
-        border : px solid red;
         width  : 50%;
     }
 
@@ -367,6 +365,11 @@
         margin-top: 12%;
         border : px solid black;
         
+    }
+
+
+    .credentials-contents  li:first-child {
+        min-width: 130px; 
     }
 
     .on-scrol {

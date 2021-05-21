@@ -36,7 +36,6 @@ export const NavBarTemplate:React.FC<Props> = props => {
 
 
 const NavBarMenuItems: React.FC<Props> = (props) => {
-    console.log(props) 
     let {tabStyles} = props;
       
     return (

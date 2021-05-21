@@ -53,6 +53,7 @@ interface State {
 }
 
 export function IndexHoc(Component) {
+    
 	return class Index extends Component<State, Props> {
     	private isFullyMounted: boolean = false;
 
@@ -95,15 +96,13 @@ export function IndexHoc(Component) {
     
         componentDidMount() {
             this.isMounted = true;
-            console.log(this.props)
             document.addEventListener('scroll', this.handlePageScroll)
-            window.onpopstate = (event) => {
-                console.log(this.props, 'is poping')
-            }
+            //window.onpopstate = (event) => {
+            //    console.log(this.props, 'is poping')
+            //}
 
             this.setTabStyles()
-            this.getProfileContents()
-             
+                        
             if (this.matchMediaSize("max-width : 980px")) {
                 this.setState({className:'fixed-top'})   
             }
@@ -157,7 +156,7 @@ export function IndexHoc(Component) {
             }
 
             setTimeout(()=> this.setState({changing:true}), 100);
-            setTimeout(()=> history.push(url, state), 1000);
+            setTimeout(()=> history.push(url, state), 500);
         };
 
 
@@ -180,27 +179,6 @@ export function IndexHoc(Component) {
             this.setState({className:''})
         }
     }   
-
-    getProfileContents():void{
-        
-        axios.get('/index/')
-        .then(response => {
-            //console.log(response) 
-            let data = response.data
-            if (data) {
-                let home = data.home[0]
-                let profile = data.profile[0]
-                
-                this.setState({profile, home})  
-            }
-            
-        })
-        .catch(error => {
-            console.log(error)  
-        })
-    }
-
-
     
     getProps(){
         let {effect, changing} = this.state;
@@ -217,8 +195,6 @@ export function IndexHoc(Component) {
         };
     };
 
-  
-      
     render() {
         let props = this.getProps();
         let {effect} = props;

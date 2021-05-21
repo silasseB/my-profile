@@ -24,6 +24,16 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
+EMAIL_HOST          = os.getenv("DEV_EMAIL_HOST")
+EMAIL_HOST_USER     = os.getenv("DEV_EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("DEV_EMAIL_HOST_PASSWORD")
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL       = EMAIL_HOST_USER
+EMAIL_FROM         = EMAIL_HOST_USER 
+
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

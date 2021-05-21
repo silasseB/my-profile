@@ -103,7 +103,7 @@ const HomePageTemplate:React.FC<{profile?:object, styles?:object}>  = props => {
             <div className="contents-header">
                 <div className="about-profile-pic-box">
                     <div className="profile-pic-box">
-                        <img src={profile['profile_pic']}
+                        <img src={profile && profile['profile_pic']}
                              alt=""
                              loading="lazy" 
                             className="profile-pic"/> 
@@ -128,7 +128,7 @@ const HomePageTemplate:React.FC<{profile?:object, styles?:object}>  = props => {
                            <li>About <span>Me</span></li>
                        </ul> 
                         <ul className="about-text">
-                            <li>{profile['about']}</li>
+                            <li>{profile && profile['about']}</li>
                         </ul>
                     </div>
 
